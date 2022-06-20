@@ -5,20 +5,25 @@
 # Author: Macatcha
  
 def pool_info():
-        a = float(input("What is your current pool calcium concentration?(ppm)"))
+        
+	a = float(input("What is your current pool calcium concentration?(ppm)"))
         b = float(input("What is the calcium concentration of the water source?(ppm)"))
         c = float(input("What is the desired pool calcium concentration?(ppm)"))
         d = float(input("What is your pool capacity?(gallons or liters)"))
         system = input("Is your capacity in customary or metric systems?").lower().strip()
         return (a,b,c,d,system)
+
 def calculate_vol(a,b,c,d,system):
-        if system == 'customary':
+        
+	if system == 'customary':
                 vol = ((c-a)*d)/(b-a)
         else:
                 vol = ((c-a)*d)/(b-a)         
         return vol
+
 while True:
-        a, b, c, d, system = pool_info()
+        
+	a, b, c, d, system = pool_info()
         if system.startswith('c'):
                 vol = calculate_vol(a, b, c, d, system ='customary')
                 print(f"Your volume to exchange is {vol} gallons")
