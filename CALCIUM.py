@@ -4,34 +4,28 @@
  
 # Author: Macatcha
  
-import sys 
-import math
-
 def pool_info():
-	
-  a = float(input("What is your current pool calcium concentration?(ppm)"))
-	b = float(input("What is the calcium concentration of the water source?(ppm)"))
-	c = float(input("What is the desired pool calcium concentration?(ppm)"))
-	d = float(input("What is your pool capacity?(gal)"))
-	
-  return pool_info(a,b,c,d)
-
-def calc_gal('a','b','c','d'):
-        
-        calc_gal = [((c-a)*d)/(b-a)]
-        
-        print("The total water to drain and refill with fresh water (gal) is", x)
-
-             answer=input("Do you wish to exit program? (yes or no)")
-
-             if answer == "yes":
-                exit()
-
-             else:
-                print("Please rerun program")
-    
-pool_info()
-
-calc_gal()
-
-        
+        a = float(input("What is your current pool calcium concentration?(ppm)"))
+        b = float(input("What is the calcium concentration of the water source?(ppm)"))
+        c = float(input("What is the desired pool calcium concentration?(ppm)"))
+        d = float(input("What is your pool capacity?(gallons or liters)"))
+        system = input("Is your capacity in customary or metric systems?").lower().strip()
+        return (a,b,c,d,system)
+def calculate_vol(a,b,c,d,system):
+        if system == 'customary':
+                vol = ((c-a)*d)/(b-a)
+        else:
+                vol = ((c-a)*d)/(b-a)         
+        return vol
+while True:
+        a, b, c, d, system = pool_info()
+        if system.startswith('c'):
+                vol = calculate_vol(a, b, c, d, system ='customary')
+                print(f"Your volume to exchange is {vol} gallons")
+                break
+        elif system.startswith('m'):
+                vol = calculate_vol(a, b, c, d)
+                print(f"Your volume is {vol} liters")
+		break
+        else:
+                print("An input error may have occurred. Try checking inputs and run again.")
