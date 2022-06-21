@@ -7,6 +7,6 @@ This first script calculates the volume exchange needed to re-equilibrate one's 
 
 Once you've got the volume you need to drain out and refill with tap (source) water, determine the pumped flow rate of water from your pool using a 5-gal bucket and timer to gauge how long it will take to pump out the needed volume. Refill. Run your pump. Wait a day or two and re-check calcium concentration.
 
-Keep in mind this python script needs to run in command line. Originally, this was set up in Google sheets (Excel) and likely that would suit more people so it may be added in here, too.
+Keep in mind this python script needs to run in command line. Originally, this was set up in Google sheets (Excel) and likely that would suit more people so it may be added in here, too. Go to branches above and see if a link has been added for a spreadsheet version of this .py program.
 
 Thanks for checking this out!
