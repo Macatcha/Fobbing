@@ -1,4 +1,4 @@
-# Fobbing
+# Fobbing/ Calcium
 Quasi-useful py script to automate calcium level rebalancing in swimming pools.
 
 Disclaimer: I am not a professional pool guy or make a business from pools, pool equipment, or the like! I am a retired math educator who continually learns about interpretive programming languages (Python), info sec, and Linux. This idea of a calcium calculator, of sorts, came from a need of my dad to reduce his pool calcium concentration, as do all pool owners eventually! Hope it is useful for you, too.
